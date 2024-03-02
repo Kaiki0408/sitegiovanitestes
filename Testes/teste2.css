@@ -1,0 +1,273 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #E6EDF7;
+}
+
+
+
+/* ------------------------------ */
+/* BOX FILTRO */
+/* ------------------------------ */
+.filtro_home {
+    min-height: 19vh;
+    background-color: #004aad;
+    /* padding: 20px; */
+    margin-top: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #002C68;
+
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* SELECT */
+/* ------------------------------ */
+select{
+    background-color: #E6EDF7;
+    color: #004aad;
+    width: 10rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size:20px;
+    border: none;
+    border-radius:4px;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* INPUT */
+/* ------------------------------ */
+input{
+    background-color: #E6EDF7;
+    color: #004aad;
+    width: 10rem;
+    height: 2.5rem;
+    padding-left: 1.3rem;
+    font-size:20px;
+    border:none;
+    border-radius:4px;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+/* ------------------------------ */
+/* INPUT - PLACEHOLDER */
+input::placeholder{
+    color: #004aad;
+    font-style: italic;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOTÃO BUSCAR - BUSCA DIRETA */
+/* ------------------------------ */
+button.filtrarbtn1 {
+    background-color: #FF2A2A;
+    color: #E6EDF7;
+    width: 10rem;
+    height: 2.5rem;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 0rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+
+}
+.filtrarbtn1:hover{
+    transition: all .5s ease-in-out;
+    background-color: #002C68;
+    box-shadow: 0px 0px 8px #002C68;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOTÃO BUSCAR - BUSCA AVANÇADA */
+/* ------------------------------ */
+button.filtrarbtn2 {
+    background-color: #FF2A2A;
+    color: #E6EDF7;
+    width: 10rem;
+    height: 2.5rem;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 0rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+
+}
+.filtrarbtn2:hover{
+    transition: all .5s ease-in-out;
+    background-color: #002C68;
+    box-shadow: 0px 0px 8px #002C68;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOX TIPOS DE FILTRO */
+/* ------------------------------ */
+div.botoes_filtro{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+/* ------------------------------ */
+
+
+/* BOTÃO - BUSCA DIRETA */
+.lodgingLink.direta{
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border: none;
+    background-color: rgb(0, 44, 104);
+    color: #E6EDF7;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+}
+
+/* ------------------------------ */
+/* BOTÃO - BUSCA AVANÇADA */
+.lodgingLink.avancada{
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: bold;
+    border-top-right-radius: 8px;
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border: none;
+    background-color: rgb(0, 44, 104);
+    color: #E6EDF7;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+}
+
+.lodgingLink.direta:first-child{
+    float: left;
+}
+.lodgingLink.avancada:last-child {
+    float: right;
+}
+.lodgingLink.selectedTab{
+  background-color: #004aad;
+}
+.lodgingLink a{
+  color: #E6EDF7;
+  text-decoration: none;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* INPUT CAIXA DE BUSCA - BUSCA DIRETA */
+/* ------------------------------ */
+.filterdireta{
+    width: 50vw;
+}
+@media screen and (max-width: 700px){
+    .filterdireta, button.filtrarbtn1{
+        width: 100%;
+    }
+    .filtro_home{
+        min-height: 27vh;
+    }
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOX CONTENT - FILTRO DIRETO */
+/* ------------------------------ */
+.room_tab.direta {
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOX CONTENT - FILTRO AVAÇADO */
+/* ------------------------------ */
+.room_tab.avancada {
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ------------------------------ */
+
+.room_tab.direta.show_tab,
+.room_tab.avancada.show_tab {
+    display:flex !important;
+}
+
+
+/* ------------------------------ */
+/* BOX RESPONSIVO */
+/* ------------------------------ */
+@media screen and (max-width: 500px) {
+    .room_tab.avancada {
+        flex-direction: column;
+    }
+    .input{
+        width: calc(100% - 1.3rem);
+    }
+    .filter_marca, .filter_modelo, .filter_anode, .filter_anoate, button.filtrarbtn2{
+        width: 100%;
+    }
+    .lodgingLink.direta{
+        padding-left: 4.8vw;
+        padding-right: 4.8vw;
+    }
+}
+/* ------------------------------ */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

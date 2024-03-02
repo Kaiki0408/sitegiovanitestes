@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="teste2.css">
+</head>
+<body>
+    <div class="filtro_home">
+        <div class="botoes_filtro" id="botoes_filtro">
+          <div class="lodgingLink direta selectedTab firstLink">
+            <a class="filter" onclick="updatetab('direta')" href="#">BUSCA DIRETA</a>
+          </div>
+          <div class="lodgingLink avancada">
+            <a class="filter" onclick="updatetab('avancada')" href="#">BUSCA AVANÇADA</a>
+          </div>
+        </div>
+      
+        <div id="room_tab_direta" class="room_tab direta show_tab">
+          <input type="text" class="filterdireta" name="" placeholder="Digite um critério de busca">
+          <button class="filtrarbtn1" type="button">BUSCAR</button>
+        </div>
+      
+        <div id="room_tab_avancada" class="room_tab avancada">
+          <div class="selectmarca">
+            <select class="filter_marca" name="marca">
+              <option value="" disabled selected hidden>Marca</option>
+              <option value="" none></option>
+              <option value="Audi">Audi</option>
+              <option value="Fiat">Fiat</option>
+              <option value="Peugeot">Peugeot</option>
+              <option value="Volvo">Volvo</option>
+              <option value="Volkswagen">Volkswagen</option>
+              <option value="testetestestestestestes">testetestestestestestes</option>
+            </select>
+          </div>
+          <div class="selectmodelo">
+            <select name="Modelo" class="filter_modelo">
+              <option value="" disabled selected hidden>Modelo</option>
+              <option value="" none></option>
+              <option value="RS6">RS6 avant</option>
+              <option value="Polo">Polo</option>
+              <option value="T-Cross">T-Cross</option>
+              <option value="206">206</option>
+              <option value="XC60">Spacefox</option>
+              <option value="Uno">Uno</option>
+            </select>
+          </div>
+          <div class="inputanode">
+            <input type="number" class="filter_anode" name="Ano de" placeholder="Ano de">
+          </div>
+          <div class="inputanoate">
+            <input type="number" class="filter_anoate" name="Ano até" placeholder="Ano até">
+          </div>
+          <button class="filtrarbtn2" type="button">BUSCAR</button>
+        </div>
+      
+      </div>
+      <div class="container">
+        <h1>teste</h1>
+      </div>
+      
+    <script src="./teste2.js"></script>
+</body>
+</html>

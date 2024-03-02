@@ -1,0 +1,376 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #E6EDF7;
+}
+
+
+
+/* ------------------------------ */
+/* BOX FILTRO */
+/* ------------------------------ */
+.filtro_home {
+    min-height: 13vh;
+    background-color: #004aad;
+    margin: 40px 10vw;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #002C68;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* SELECT */
+/* ------------------------------ */
+select{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E6EDF7;
+    color: #004aad;
+    width: 10rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size:20px;
+    border: none;
+    border-radius:4px;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* INPUT */
+/* ------------------------------ */
+input{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E6EDF7;
+    color: #004aad;
+    width: 10rem;
+    height: 2.5rem;
+    padding-left: 1.3rem;
+    font-size:20px;
+    border:none;
+    border-radius:4px;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+/* ------------------------------ */
+/* INPUT - PLACEHOLDER */
+input::placeholder{
+    color: #004aad;
+    font-style: italic;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOTÃO BUSCAR */
+/* ------------------------------ */
+button.filtrarbtn1,
+button.filtrarbtn2 {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FF2A2A;
+    color: #E6EDF7;
+    width: 10rem;
+    height: 2.5rem;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 0rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.filtrarbtn1:hover,
+.filtrarbtn2:hover{
+    transition: all .5s ease-in-out;
+    background-color: #002C68;
+    box-shadow: 0px 0px 8px #002C68;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOX TIPOS DE FILTRO */
+/* ------------------------------ */
+div.botoes_filtro{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+/* ------------------------------ */
+/* BOTÃO - BUSCA DIRETA */
+button.btndireta,
+button.btnavancada{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: bold;
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: center;
+    border: none;
+    color: #E6EDF7;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+}
+
+/* ------------------------------ */
+/* BOTÃO - BORDAS */
+button.btndireta{
+    background-color: #004aad;
+    border-top-left-radius: 8px;
+    float: left;
+}
+button.btnavancada{
+    background-color: #002C68;
+    border-top-right-radius: 8px;
+    float: right;
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* INPUT CAIXA DE BUSCA - BUSCA DIRETA */
+/* ------------------------------ */
+.filterdireta{
+    width: 50vw;
+}
+@media screen and (max-width: 700px){
+    .filterdireta, button.filtrarbtn1{
+        width: 100%;
+    }
+    .filtro_home{
+        min-height: 19vh;
+    }
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* BOX CONTENT - FILTRO DIRETO */
+/* ------------------------------ */
+.boxfilter1,
+.boxfilter2 {
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ------------------------------ */
+.boxfilter1.show_tab,
+.boxfilter2.show_tab {
+    display:flex !important;
+}
+
+
+/* ------------------------------ */
+/* BOX RESPONSIVO */
+/* ------------------------------ */
+@media screen and (max-width: 500px) {
+    .boxfilter2 {
+        flex-direction: column;
+    }
+    .input{
+        width: calc(100% - 1.3rem);
+    }
+    .filter_marca, .filter_modelo, .filter_anode, .filter_anoate, button.filtrarbtn2{
+        width: 100%;
+    }
+    button.btndireta{
+        padding-left: 4.8vw;
+        padding-right: 4.8vw;
+    }
+}
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* DIV HOME - QUEM SOMOS */
+/* ------------------------------ */
+.bar_home{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 0 0;
+    padding: 5px;
+    background-color: #002C68;
+    color: #E6EDF7;
+    font-size: clamp(12px, 2vw, 24px);
+    font-weight: 600;
+    max-width: 100%;
+    text-align: center;
+}
+.quem_somos{
+    background-color: #004aad;
+    color: #E6EDF7;
+    margin: 0 0 0 0;
+    padding: 40px 10vw 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.box_quem_somos, .box_img_qs_home{
+    max-width: calc(50% - 3vw);
+    max-height: 100%;
+}
+.qs_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.qs_text{
+    font-family: 'Montserrat', sans-serif;
+    text-align:justify;
+    font-size: clamp(8px, 4vw, 20px);
+    font-weight: 200;
+    margin: 0 0 21px;
+}
+.qs_btn{
+    background-color: #E6EDF7;
+    color:#004aad;
+    border: 1px solid #E6EDF7;
+    border-radius: 8px;
+    font-size: clamp(12px, 4vw, 16px);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 3vw;
+    margin: 0 0 21px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px #002C68;
+}
+.qs_btn:hover{
+    transition: all .5s ease-in-out;
+    background-color: #004aad;
+    color: #E6EDF7;
+    border: 1px solid #E6EDF7;
+    box-shadow: none;
+}
+.box_img_qs_home{
+    display: block;
+    justify-content: center;
+    align-items: right;
+}
+#img_qs_home{
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #002C68;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .quem_somos{
+        display: inline-block;
+    }
+    .box_quem_somos, .box_img_qs_home{
+        max-width: 100%;
+    }
+    .qs_btn{
+        width: 100%;
+    }
+}
+/* ------------------------------ */
+
+
+
+/* ------------------------------ */
+/* DIV - PONTOS POSITIVOS */
+/* ------------------------------ */
+.pontos_positivos{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('imagens/fachada_2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom center;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,1);
+}
+.pontos_positivos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagens/fachada_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-color: rgba(0, 0, 0, 0.1);
+    filter: blur(4px);
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,1);
+}
+.positive_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(14px, 4vw, 24px);
+    font-weight: 600;
+    color: #E6EDF7;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,.5)) ;
+}
+.box_positivos{
+    position: absolute;
+    padding: 0 10vw;
+    display: grid;
+    /* grid-template-rows: 5vw auto auto 5vw 5vw 5vw ;
+    grid-template-columns: 30vw;
+    grid-template-areas: 'bx_1' 'bx_2' 'bx_3' 'bx_4' 'bx_5' 'bx_6';
+    height: 1vh; */
+    flex-wrap: wrap;
+    /* justify-content: stretch; */
+    /* justify-items: stretch; */
+    /* align-items: stretch; */
+    gap: 1vw;
+}
+.box_1{
+    /* width: 20vw;
+    height: 7vw; */
+    flex: 2 0 100px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    background-color: #E6EDF7;
+    border: none;
+    border-radius: 4px;
+    padding: 20px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: 600;
+    color: #004aad;
+
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* ------------------------------ */
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
