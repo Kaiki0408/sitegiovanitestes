@@ -35,3 +35,25 @@ btndireta.addEventListener('click', function() {
     btnavancada.style.backgroundColor = 'rgba(0, 44, 104, 100)';
 });
 
+
+// Função para ajustar o tamanho dos ícones responsivamente
+function ajustarTamanhoIcones() {
+    var larguraTela = window.innerWidth;
+    var iconesResponsivos = document.querySelectorAll('.icon-responsivo');
+
+    iconesResponsivos.forEach(function(icone) {
+        // Se a largura da tela for menor que um determinado valor, mude a classe do ícone
+        if (larguraTela < 768) {
+            icone.classList.remove('bx-md');
+            icone.classList.add('bx-sm');
+        } else {
+            icone.classList.remove('bx-sm');
+            icone.classList.add('bx-md');
+        }
+    });
+}
+
+// Chame a função quando a página for carregada e redimensionada
+window.addEventListener('load', ajustarTamanhoIcones);
+window.addEventListener('resize', ajustarTamanhoIcones);
+

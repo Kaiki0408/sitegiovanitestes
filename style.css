@@ -51,7 +51,7 @@ input{
     width: 10rem;
     height: 2.5rem;
     padding-left: 1.3rem;
-    font-size:20px;
+    font-size: 20px;
     border:none;
     border-radius:4px;
     box-sizing: border-box;
@@ -79,7 +79,7 @@ button.filtrarbtn2 {
     width: 10rem;
     height: 2.5rem;
     align-items: center;
-    font-size: 24px;
+    font-size: clamp(18px, 3vw, 24px);
     font-weight: bold;
     border: none;
     border-radius: 4px;
@@ -245,7 +245,7 @@ button.btnavancada{
     background-color: #E6EDF7;
     color:#004aad;
     border: 1px solid #E6EDF7;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: clamp(12px, 4vw, 16px);
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
@@ -325,42 +325,48 @@ button.btnavancada{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     filter: drop-shadow(0 0 4px rgba(0,0,0,.5)) ;
 }
 .box_positivos{
     position: absolute;
     padding: 0 10vw;
-    display: grid;
-    /* grid-template-rows: 5vw auto auto 5vw 5vw 5vw ;
-    grid-template-columns: 30vw;
-    grid-template-areas: 'bx_1' 'bx_2' 'bx_3' 'bx_4' 'bx_5' 'bx_6';
-    height: 1vh; */
+    display: flex;
     flex-wrap: wrap;
-    /* justify-content: stretch; */
-    /* justify-items: stretch; */
-    /* align-items: stretch; */
-    gap: 1vw;
+    gap: 20px;
+    justify-content: space-between;
+    align-content: space-between;
 }
 .box_1{
-    /* width: 20vw;
-    height: 7vw; */
-    flex: 2 0 100px;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    width: 22vw;
+    min-width: 22vw;
+    height: 120px;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     text-align: center;
+    gap: 4px;
     background-color: #E6EDF7;
     border: none;
     border-radius: 4px;
-    padding: 20px !important;
+    padding: 1% !important;
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(14px, 3vw, 24px);
     font-weight: 600;
     color: #004aad;
-
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
-
+@media screen and (max-width: 768px) {
+    .box_1{
+        min-width: 36vw;
+        height: 80px;
+    }
+    .box_positivos{
+        gap: 5px;
+    }
+}
 
 
 
@@ -373,4 +379,5 @@ button.btnavancada{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #002C68;
 }
