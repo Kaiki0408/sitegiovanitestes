@@ -448,35 +448,19 @@ button.btnavancada{
 .pontos_positivos{
     position: relative;
     width: 100%;
-    height: 500px;
-    background-image: url('/imagens/fachada_2.jpg');
+    padding: 40px 0;
+    background-image: url('/imagens/fachada_2.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: bottom center;
-    overflow: hidden;
-    box-shadow: inset 0px 0px 100px rgba(0,0,0,1);
-}
-.pontos_positivos::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/imagens/fachada_2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    background-color: rgba(0, 0, 0, 0.1);
-    filter: blur(4px);
-    box-shadow: inset 0px 0px 100px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 50px rgba(0,0,0,0.5);
 }
 .positive_title{
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(14px, 4vw, 24px);
     font-weight: 600;
     color: #E6EDF7;
-    padding: 40px;
+    padding: 0 0 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -484,7 +468,7 @@ button.btnavancada{
     filter: drop-shadow(0 0 4px rgba(0,0,0,.5)) ;
 }
 .box_positivos{
-    position: absolute;
+    position: relative;
     padding: 0 10vw;
     display: flex;
     flex-wrap: wrap;
@@ -495,7 +479,7 @@ button.btnavancada{
 .box_1{
     width: 22vw;
     min-width: 22vw;
-    height: 120px;
+    height: 160px;
     display: grid;
     justify-items: center;
     justify-content: center;
@@ -554,6 +538,9 @@ button.btnavancada{
     margin: 20px;
     height: 100%;
     background-color: #E6ED99;
+}
+.bg_servicos{
+    background-size: cover;
 }
 /* ------------------------------ */
 
