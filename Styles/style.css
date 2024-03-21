@@ -619,7 +619,7 @@ footer a{
     font-weight: 200;
 }
 footer a:hover{
-    font-weight: 500;
+    color: var(--vermelho);
 }
 footer .title_link_footer{
     font-size: 16px;
@@ -651,6 +651,15 @@ footer .title_link_footer{
     width: 100%;
     font-size: 14px;
     font-weight: 200;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.base_footer_dev{
+    display: inline-flex;
+    gap: 10px;
 }
 
 @media (max-width:400px) {
