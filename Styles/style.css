@@ -12,10 +12,10 @@ body {
 
 :root {
     --background-color: #e6edf7;
-    --vermelho: #ff2b2b;
-    --azul-escuro: #001a3d;
     --azul-principal: #004aad;
     --azul-medio: #002c68;
+    --azul-escuro: #001a3d;
+    --vermelho: #ff2b2b;
 }
   
 * {
@@ -37,6 +37,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     z-index: 100;
 }
 
@@ -51,12 +52,26 @@ body {
     z-index: -1;
 }
 
+.navbar{
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar a {
     font-size: 1.35rem;
     color: var(--background-color);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 2.5rem;
+    /* margin-left: 2.5rem; */
+}
+
+.navbar .selected{
+    color: var(--vermelho);
+    border-bottom: 1px solid var(--vermelho);
 }
 
 .navbar a:hover {
@@ -74,7 +89,7 @@ body {
 
 .icons {
     position: absolute;
-    right: 5%;
+    right: 10%;
     font-size: 2.8rem;
     color: var(--background-color);
     cursor: pointer;
@@ -96,11 +111,11 @@ section:nth-of-type(1){
 
 @media (max-width: 992px) {
     .header {
-        padding: 1.3rem 5%;
+        padding: 1.3rem 10%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1170px) {
     .icons {
         display: inline-flex;
     }
@@ -452,7 +467,7 @@ button.btnavancada{
     background-image: url('/imagens/fachada_2.png');
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: bottom center;
+    background-position: center center;
     box-shadow: inset 0px 0px 50px rgba(0,0,0,0.5);
 }
 .positive_title{
@@ -500,7 +515,7 @@ button.btnavancada{
 @media screen and (max-width: 768px) {
     .box_1{
         min-width: 36vw;
-        height: 80px;
+        height: 120px;
     }
     .box_positivos{
         gap: 5px;
@@ -514,33 +529,108 @@ button.btnavancada{
 /* HOME - NOSSOS SERVIÇOS */
 /* ------------------------------ */
 .nossos_serv{
-    background-color: #004aad;
-    color: #E6EDF7;
     margin: 0 0 0 0;
     padding: 40px 10vw 40px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: top;
-    gap: 20px;
+    gap: 10px;
+    color: var(--azul-escuro);
+    background-color: #004aad;
 }
 .box_ns{
-    /* position:absolute; */
-    width: 360px;
-    height: 475px;
-    background-color: #E6EDF7;
+    width: 22rem;
+    height: 28rem;
+    padding: 20px;
     border-radius: 4px;
+    background-color: var(--background-color);
     box-shadow: 0 0 0 0 #002C68;
     overflow: hidden;
-
 }
 .img_ns{
-    position:relative;
-    margin: 20px;
     height: 100%;
-    background-color: #E6ED99;
-}
-.bg_servicos{
     background-size: cover;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+#img_ns_1{
+    background-image: url(/imagens/servicos_1.avif);
+    background-position: center center;
+}
+#img_ns_2{
+    background-image: url(/imagens/servicos_2.jpg);
+    background-position: top center;
+}
+#img_ns_3{
+    background-image: url(/imagens/servicos_3.jpg);
+    background-position: center center;
+}
+
+.img_ns .img_text_bx_ns{
+    background-color: rgba(176, 199, 230, 0.85);    
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 5px;
+}
+.block_title_icon_box_servicos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2px;
+}
+.img_text_bx_ns .title_bx_ns{
+    font-weight: 600;
+    font-size: clamp(14px, 3vw, 18px);
+}
+.img_text_bx_ns .text_bx_ns{
+    font-weight: 400;
+    font-size: clamp(10px, 3vw, 14px);
+}
+.btn_bx_ns{
+    background-color: transparent;
+    color: var(--azul-escuro);
+    border: 1px solid var(--azul-escuro);
+    border-radius: 4px;
+    font-size: clamp(12px, 4vw, 16px);
+    font-weight: 500;
+    padding: 0.2rem 1.2rem;
+    box-sizing: border-box;
+}
+.btn_bx_ns:hover{
+    background-color: var(--azul-escuro);
+    color: var(--background-color);
+}
+@media  (max-width: 895px) {
+    .nossos_serv{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .box_ns{
+        width: 100%;
+        height: 26rem;
+    }
+    .img_ns .img_text_bx_ns{
+        height: auto;
+    }
 }
 /* ------------------------------ */
 
@@ -643,6 +733,7 @@ footer .title_link_footer{
     flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
+    gap: 10px;
 }
 .base_footer_dev{
     display: inline-flex;
